@@ -1,0 +1,17 @@
+package {
+    default_applicable_licenses: ["animal_sniffer_license"],
+}
+
+license {
+    name: "animal_sniffer_license",
+    visibility: [":__subpackages__"],
+    license_kinds: ["SPDX-license-identifier-MIT"],
+    license_text: ["LICENSE"],
+}
+
+// only annotations needed
+java_library_host {
+    name: "animal-sniffer-annotations",
+    srcs: ["animal-sniffer-annotations/src/main/java/**/*.java"],
+    visibility: ["//external/opentelemetry-java:__subpackages__"],
+}
